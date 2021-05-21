@@ -10,6 +10,7 @@ module.exports = {
           version: plugin.version,
           exports: plugin
       });
+      console.log('cadquery-vtk-viewer activated')
   },
   autoStart: true
 };

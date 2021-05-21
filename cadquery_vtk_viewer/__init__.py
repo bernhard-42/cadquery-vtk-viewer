@@ -1,6 +1,6 @@
 from ._version import version_info, __version__
 
-from .example import *
+from .viewer import *
 
 
 def _jupyter_labextension_paths():
@@ -16,10 +16,12 @@ def _jupyter_labextension_paths():
         from `src` directory into <jupyter path>/labextensions/<dest> directory
         during widget installation
     """
-    return [{
-        'src': 'labextension',
-        'dest': 'cadquery-vtk-viewer',
-    }]
+    return [
+        {
+            "src": "labextension",
+            "dest": "cadquery-vtk-viewer",
+        }
+    ]
 
 
 def _jupyter_nbextension_paths():
@@ -39,9 +41,11 @@ def _jupyter_nbextension_paths():
     require: Path to importable AMD Javascript module inside the
         <jupyter path>/nbextensions/<dest> directory
     """
-    return [{
-        'section': 'notebook',
-        'src': 'nbextension',
-        'dest': 'cadquery-vtk-viewer',
-        'require': 'cadquery-vtk-viewer/extension'
-    }]
+    return [
+        {
+            "section": "notebook",
+            "src": "nbextension",
+            "dest": "cadquery-vtk-viewer",
+            "require": "cadquery-vtk-viewer/extension",
+        }
+    ]
